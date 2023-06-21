@@ -23,12 +23,8 @@ const AddTask = ({ handleTaskAddition, tasks, task,  setTasks, handleTaskClick, 
         
         console.log(suggestions);
         return (
-          <div>
-            <ReactScrollWheelHandler
-                style={{
-                    width: "100%",
-                    height: "140px"
-                }}>
+          <div className="taskscroll">
+            
             {Array.isArray(suggestions)
                 ? suggestions.map((sug, id) => (
                 
@@ -38,7 +34,6 @@ const AddTask = ({ handleTaskAddition, tasks, task,  setTasks, handleTaskClick, 
                     </div>
                 </div>
                 )): null}
-            </ReactScrollWheelHandler>
           </div>
         )  
     };
